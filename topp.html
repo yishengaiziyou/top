@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>topp</title>
+</head>
+<style>
+	.box{
+		width: 1000px;
+		height: 5000px;
+		border: 2px solid red;
+		margin: 0 auto;
+	}
+	.top{
+		width: 200px;
+		height: 200px;
+		background: red;
+		border-radius: 100px;
+		font-size: 50px;
+		color: #fff;
+		text-align: center;
+		line-height: 200px;
+		position: fixed;
+		right: 0;
+		bottom: 50px;
+		display: none;
+	}
+</style>
+<body>
+	<div class="box"></div>
+	<div class="top">TOP</div>
+</body>
+</html>
+<script>
+	let top1 = document.querySelector('.top');
+	window.onscroll = function(){
+		var scrollTop = document.documentElement.scrollTop||document.body.scrollTop||window.scrollY||window.pageY0ffset;
+		console.log(scrollTop);
+		if(document.documentElement.scrollTop > 1500){
+			top1.style.display = 'block';
+		}else{
+			top1.style.display = 'none';
+		}
+	}
+    top.onclick = function () {
+        window.scroll(0,0);
+    }
+</script>
